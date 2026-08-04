@@ -233,7 +233,7 @@ export const PROJECTS: Project[] = [
     index: '05',
     title: 'TalkGlove',
     category: 'Wearable / Assistive Tech',
-    year: '2024',
+    year: '2026',
     summary:
        'A wearable assistive-technology prototype that converts recognized hand gestures into spoken output. Flex-sensor readings are processed through a trained gesture-classification system and translated into speech to support more accessible communication.',
     image:
@@ -295,14 +295,14 @@ export const PROJECTS: Project[] = [
     id: 'laundicast',
     index: '07',
     title: 'LaundriCast',
-    category: 'Full-Stack / IoT',
+    category: 'Weather / Productivity App',
     year: '2024',
     summary:
       'A weather-based laundry planning application that uses real-time forecast data to help users choose suitable times for washing and drying clothes. It provides weather recommendations, reminders, and task tracking to make laundry scheduling more convenient and efficient.',
     image:
       '/images/laundricast.jpg',
     alt: 'Row of modern washing machines in a launderette',
-    tags: ['React', 'Supabase', 'ESP32', 'Realtime'],
+    tags: ['React', 'Weather API', 'Task Planning', 'Responsive UI'],
     actions: [
       {
         label: 'Watch Demo',
@@ -524,9 +524,9 @@ export const JOURNEY: JourneyStep[] = [
   },
   {
     year: '2024',
-    title: 'Hardware meets the web',
+    title: 'Weather-based application development',
     detail:
-      'Built TalkGlove and LaundriCast — projects that bridge wearables and IoT sensors with full-stack web dashboards.',
+      'Developed LaundriCast, a weather-based productivity application for planning washing and drying schedules.',
   },
   {
     year: '2025',
@@ -536,9 +536,9 @@ export const JOURNEY: JourneyStep[] = [
   },
   {
     year: '2026',
-    title: 'Graduating & open to collaborate',
+    title: 'Research, graduation & collaboration',
     detail:
-      'Finishing the Computer Engineering degree and looking for full-stack and embedded systems opportunities.',
+      'Developed TalkGlove as a research project, completed the Computer Engineering degree, and continued building full-stack and embedded systems projects.',
   },
 ];
 
