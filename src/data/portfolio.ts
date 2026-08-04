@@ -77,9 +77,9 @@ export const PROJECTS: Project[] = [
     category: 'Hospitality / Business Website',
     year: '2026',
     summary:
-      'A responsive hospitality website that presents The Hamlet F through a polished, mobile-friendly experience, making its brand, spaces, offerings, and visitor information easy to explore.',
+      'A responsive hospitality website designed to introduce The Hamlet’s brand, spaces, food, drinks, art, and community experience. The interface uses strong visual storytelling and mobile-friendly layouts to help visitors explore the venue and its offerings.',
     image: '/images/the-hamlet-f.png',
-    alt: 'The Hamlet F responsive hospitality website',
+    alt: 'The Hamlet responsive hospitality website',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
     link: 'https://the-hamlet-f.vercel.app/',
     group: 'software',
@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
     category: 'Cafe / Business Website',
     year: '2026',
     summary:
-      'A responsive cafe website designed to showcase the Craze Cafe brand, offerings, and customer information through a modern and engaging interface across desktop and mobile devices.',
+      'A modern and responsive cafe website that presents Craze Cafe’s brand and offerings through an engaging digital experience. The site was designed for clear navigation, consistent visual identity, and smooth browsing across desktop and mobile devices.',
     image: '/images/craze-cafe.png',
     alt: 'Craze Cafe responsive business website',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
@@ -105,7 +105,7 @@ export const PROJECTS: Project[] = [
     category: 'Construction / Property Website',
     year: '2026',
     summary:
-      'A responsive business website for Casa Mia Construction and Property Development Consultancy Services, presenting its company profile, services, projects, careers, enquiry options, and contact information.',
+      'A responsive corporate website for Casa Mia Construction and Property Development Consultancy Services. It organizes the company profile, services, completed projects, careers, enquiry forms, and contact information into a professional platform for local and international clients.',
     image: '/images/casa-mia.png',
     alt: 'Casa Mia construction and property consultancy website',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Business Website'],
@@ -119,11 +119,11 @@ export const PROJECTS: Project[] = [
     category: 'Embedded / IoT',
     year: '2025',
     summary:
-      'A dual-axis solar tracking system that follows the sun throughout the day using light-dependent sensors and a servo-driven mount, improving energy yield over fixed panels.',
+       'A dual-axis solar tracking prototype powered by a Raspberry Pi 5 that uses light-dependent sensors and servo-controlled movement to follow the strongest light source. The system demonstrates sensor-based automation designed to improve solar-panel alignment compared with a fixed position.',
     image:
       '/images/solar.jpg',
     alt: 'Row of photovoltaic solar panels mounted on a green field',
-    tags: ['Embedded C', 'Servo Control', 'LDR Sensors', 'Arduino'],
+    tags: ['Raspberry Pi 5', 'Python', 'LDR Sensors', 'Servo Control'],
     group: 'hardware',
   },
   {
@@ -133,7 +133,7 @@ export const PROJECTS: Project[] = [
     category: 'Wearable / Assistive Tech',
     year: '2024',
     summary:
-      'A gesture-to-speech glove that translates sign-language gestures into spoken words in real time using flex sensors and a trained gesture classifier.',
+       'A wearable assistive-technology prototype that converts recognized hand gestures into spoken output. Flex-sensor readings are processed through a trained gesture-classification system and translated into speech to support more accessible communication.',
     image:
       '/images/gloves.jpg',
     alt: 'Robotic hand reaching toward a light on a white background',
@@ -163,7 +163,7 @@ export const PROJECTS: Project[] = [
     category: 'Computer Vision',
     year: '2023',
     summary:
-      'A computer-vision tool that identifies and classifies electronic components on a workbench from a single camera frame, returning specs and part references.',
+      'A computer-vision application that analyzes camera images to identify and classify common electronic components. The system helps users recognize parts more efficiently by presenting the detected component together with relevant specifications and reference information.',
     image:
       'https://images.pexels.com/photos/6477207/pexels-photo-6477207.jpeg?auto=compress&cs=tinysrgb&w=1400',
     alt: 'Macro shot of electronic components on a circuit board',
@@ -178,7 +178,7 @@ export const PROJECTS: Project[] = [
     category: 'Web App / Monitoring',
     year: '2026',
     summary:
-      'An automated website monitoring platform that tracks uptime, detects downtime, measures website performance, and presents real-time analytics through a centralized dashboard.',
+     'A role-based website monitoring platform with Viewer, Admin, and Super Admin account levels. It supports monitoring more than 15 websites, performs automated availability checks every 30 seconds, and delivered Gmail outage and recovery alerts within approximately 5–15 seconds during testing.',
     image: 'https://steven-portfolio-alpha.vercel.app/webpulse.png',
     alt: 'WebPulse website monitoring dashboard',
     tags: ['React', 'Monitoring', 'Dashboard'],
@@ -192,7 +192,7 @@ export const PROJECTS: Project[] = [
     category: 'Mobile / Emergency Response',
     year: '—',
     summary:
-      'An emergency assistance and disaster preparedness application that connects users to urgent services, donation tracking, emergency checklists, and disaster guides for safer communities.',
+      'An emergency assistance and disaster-preparedness application that brings urgent-service information, emergency checklists, donation tracking, and disaster guides into one accessible platform. It was designed to help users quickly find practical information before and during emergency situations.',
     image: 'https://steven-portfolio-alpha.vercel.app/humanda.jpg',
     alt: 'Human Da emergency assistance and disaster preparedness application',
     tags: ['Emergency App', 'Disaster Response', 'Donations'],
@@ -207,7 +207,7 @@ export const PROJECTS: Project[] = [
     category: 'Robotics / Automation',
     year: '—',
     summary:
-      'A robotic arm prototype designed for precise, repeatable, and flexible object manipulation, supporting automation, hazardous-task handling, assistive use, and robotics education.',
+     'A robotic-arm prototype developed for controlled and repeatable object manipulation. The project demonstrates fundamental concepts in robotics, actuator control, mechanical movement, and automation for educational, assistive, and hazardous-task applications.',
     image: 'https://steven-portfolio-alpha.vercel.app/ark3.png',
     alt: 'ARK3 robotic arm prototype',
     tags: ['Robotics', 'Automation', 'Prototype'],
