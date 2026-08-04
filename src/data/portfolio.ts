@@ -148,7 +148,7 @@ export const PROJECTS: Project[] = [
     category: 'Full-Stack / IoT',
     year: '2024',
     summary:
-      'A laundry-shop monitoring platform that pairs machine-mounted sensors with a web dashboard to track machine availability, queue status, and revenue in real time.',
+      'A weather-based laundry planning application that uses real-time forecast data to help users choose suitable times for washing and drying clothes. It provides weather recommendations, reminders, and task tracking to make laundry scheduling more convenient and efficient.',
     image:
       '/images/laundricast.jpg',
     alt: 'Row of modern washing machines in a launderette',
