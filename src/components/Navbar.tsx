@@ -2,11 +2,6 @@ import { useEffect, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { NAV_LINKS } from '@/data/portfolio';
 
-const CONTACT_LINK = {
-  label: 'Contact',
-  href: '#contact',
-};
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -18,7 +13,7 @@ export default function Navbar() {
     const updateActiveSection = () => {
       setScrolled(window.scrollY > 24);
 
-      const allLinks = [...NAV_LINKS, CONTACT_LINK];
+      const allLinks = NAV_LINKS;
       const navbarOffset = 110;
 
       const isAtBottom =

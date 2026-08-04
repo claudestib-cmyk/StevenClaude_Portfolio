@@ -45,9 +45,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const NAV_LINKS = [
-  { label: 'About', href: '#about' },
+  { label: 'Introduction', href: '#introduction' },
   { label: 'Work', href: '#work' },
   { label: 'Expertise', href: '#expertise' },
+  { label: 'About', href: '#about' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -123,7 +124,6 @@ export const PROJECTS: Project[] = [
       '/images/solar.jpg',
     alt: 'Row of photovoltaic solar panels mounted on a green field',
     tags: ['Embedded C', 'Servo Control', 'LDR Sensors', 'Arduino'],
-    link: 'https://steven-portfolio-alpha.vercel.app/',
     group: 'hardware',
   },
   {
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
       '/images/gloves.jpg',
     alt: 'Robotic hand reaching toward a light on a white background',
     tags: ['Flex Sensors', 'Gesture ML', 'Text-to-Speech', 'Wearable'],
-    link: 'https://steven-portfolio-alpha.vercel.app/',
+    link: 'https://drive.google.com/file/d/1xj7HYnum82hgzXYDXBLlqb6ykWEr7ZFM/view',
     group: 'hardware',
   },
   {
@@ -153,7 +153,7 @@ export const PROJECTS: Project[] = [
       '/images/laundricast.jpg',
     alt: 'Row of modern washing machines in a launderette',
     tags: ['React', 'Supabase', 'ESP32', 'Realtime'],
-    link: 'https://steven-portfolio-alpha.vercel.app/',
+    link: 'https://drive.google.com/file/d/1Y_5kcCXh3Lx7QxHzWec_I-tvE4kMiCO0/view',
     group: 'software',
   },
   {
@@ -168,7 +168,7 @@ export const PROJECTS: Project[] = [
       'https://images.pexels.com/photos/6477207/pexels-photo-6477207.jpeg?auto=compress&cs=tinysrgb&w=1400',
     alt: 'Macro shot of electronic components on a circuit board',
     tags: ['OpenCV', 'Object Detection', 'Python', 'Edge'],
-    link: 'https://steven-portfolio-alpha.vercel.app/',
+
     group: 'software',
   },
   {
