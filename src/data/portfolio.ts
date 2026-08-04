@@ -55,6 +55,26 @@ export const NAV_LINKS = [
 
 export type ProjectGroup = 'software' | 'hardware';
 
+export type ProjectActionType =
+  | 'live'
+  | 'demo'
+  | 'source'
+  | 'case-study';
+
+export type ProjectAction = {
+  label: string;
+  href: string;
+  type: ProjectActionType;
+};
+
+export type ProjectCaseStudy = {
+  role: string;
+  challenge: string;
+  approach: string;
+  outcome: string;
+  highlights: string[];
+};
+
 export type Project = {
   id: string;
   index: string;
@@ -65,42 +85,50 @@ export type Project = {
   image: string;
   alt: string;
   tags: string[];
-  link?: string;
+  actions?: ProjectAction[];
+  caseStudy?: ProjectCaseStudy;
   group: ProjectGroup;
 };
 
 export const PROJECTS: Project[] = [
   {
-    id: 'the-hamlet-f',
+    id: 'webpulse',
     index: '01',
-    title: 'The Hamlet ',
-    category: 'Hospitality / Business Website',
+    title: 'WebPulse',
+    category: 'Web App / Monitoring',
     year: '2026',
     summary:
-      'A responsive hospitality website designed to introduce The Hamlet’s brand, spaces, food, drinks, art, and community experience. The interface uses strong visual storytelling and mobile-friendly layouts to help visitors explore the venue and its offerings.',
-    image: '/images/the-hamlet-f.png',
-    alt: 'The Hamlet responsive hospitality website',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    link: 'https://the-hamlet-f.vercel.app/',
-    group: 'software',
-  },
-  {
-    id: 'craze-cafe',
-    index: '02',
-    title: 'Craze Cafe',
-    category: 'Cafe / Business Website',
-    year: '2026',
-    summary:
-      'A modern and responsive cafe website that presents Craze Cafe’s brand and offerings through an engaging digital experience. The site was designed for clear navigation, consistent visual identity, and smooth browsing across desktop and mobile devices.',
-    image: '/images/craze-cafe.png',
-    alt: 'Craze Cafe responsive business website',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    link: 'https://craze-cafe.vercel.app/',
+     'A role-based website monitoring platform with Viewer, Admin, and Super Admin account levels. It supports monitoring more than 15 websites, performs automated availability checks every 30 seconds, and delivered Gmail outage and recovery alerts within approximately 5–15 seconds during testing.',
+    image: 'https://steven-portfolio-alpha.vercel.app/webpulse.png',
+    alt: 'WebPulse website monitoring dashboard',
+    tags: ['React', 'Monitoring', 'Dashboard'],
+    actions: [
+      {
+        label: 'Live Website',
+        href: 'https://web-pulse-6yjl.vercel.app/',
+        type: 'live',
+      },
+    ],
+    caseStudy: {
+      role: 'Full-Stack Developer',
+      challenge:
+        'Website owners needed a centralized way to monitor availability and receive fast outage notifications without manually checking each site.',
+      approach:
+        'Designed, developed, tested, and deployed a role-based monitoring platform with Viewer, Admin, and Super Admin accounts, subscription upgrades, dashboards, incident history, 30-second availability checks, and automated Gmail outage and recovery alerts.',
+      outcome:
+        'Admin and Super Admin accounts can monitor more than 15 websites, while outage and recovery notifications were delivered within approximately 5–15 seconds during testing.',
+      highlights: [
+        'Viewer, Admin, and Super Admin roles',
+        'Automated 30-second availability checks',
+        'Gmail outage and recovery alerts',
+        'Incident history and monitoring dashboards',
+      ],
+    },
     group: 'software',
   },
   {
     id: 'casa-mia',
-    index: '03',
+    index: '02',
     title: 'Casa Mia',
     category: 'Construction / Property Website',
     year: '2026',
@@ -109,22 +137,96 @@ export const PROJECTS: Project[] = [
     image: '/images/casa-mia.png',
     alt: 'Casa Mia construction and property consultancy website',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Business Website'],
-    link: 'https://casa-mia-mock.vercel.app/',
+    actions: [
+      {
+        label: 'Live Website',
+        href: 'https://casa-mia-mock.vercel.app/',
+        type: 'live',
+      },
+    ],
+    caseStudy: {
+      role: 'Website Designer & Developer',
+      challenge:
+        'The construction and property consultancy needed one professional platform for its company profile, services, projects, career opportunities, enquiries, and client contact points.',
+      approach:
+        'Organized the company’s information into a responsive corporate website with structured service content, project presentation, careers, enquiry forms, request-for-quote access, and contact details.',
+      outcome:
+        'Consolidated the company’s client-facing information and enquiry pathways into a single professional website for local and international audiences.',
+      highlights: [
+        'Corporate information architecture',
+        'Enquiry and quotation pathways',
+        'Responsive client-facing design',
+      ],
+    },
     group: 'software',
   },
   {
-    id: 'solar-tracker',
-    index: '04',
-    title: 'Smart Sun Tracking Solar Panel',
-    category: 'Embedded / IoT',
-    year: '2025',
+    id: 'the-hamlet-f',
+    index: '03',
+    title: 'The Hamlet',
+    category: 'Hospitality / Business Website',
+    year: '2026',
     summary:
-       'A dual-axis solar tracking prototype powered by a Raspberry Pi 5 that uses light-dependent sensors and servo-controlled movement to follow the strongest light source. The system demonstrates sensor-based automation designed to improve solar-panel alignment compared with a fixed position.',
-    image:
-      '/images/solar.jpg',
-    alt: 'Row of photovoltaic solar panels mounted on a green field',
-    tags: ['Raspberry Pi 5', 'Python', 'LDR Sensors', 'Servo Control'],
-    group: 'hardware',
+      'A responsive hospitality website designed to introduce The Hamlet’s brand, spaces, food, drinks, art, and community experience. The interface uses strong visual storytelling and mobile-friendly layouts to help visitors explore the venue and its offerings.',
+    image: '/images/the-hamlet-f.png',
+    alt: 'The Hamlet responsive hospitality website',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+    actions: [
+      {
+        label: 'Live Website',
+        href: 'https://the-hamlet-f.vercel.app/',
+        type: 'live',
+      },
+    ],
+    caseStudy: {
+      role: 'Web Designer & Frontend Developer',
+      challenge:
+        'The venue needed a website that could communicate more than a menu by presenting its spaces, food, drinks, art, and community atmosphere in one clear experience.',
+      approach:
+        'Designed and developed a responsive website with visual storytelling, structured content sections, and mobile-friendly navigation that lets visitors quickly understand the venue and explore its offerings.',
+      outcome:
+        'Created a polished digital presence that gives potential visitors a clear introduction to The Hamlet before they visit.',
+      highlights: [
+        'Responsive hospitality website',
+        'Visual storytelling and content structure',
+        'Consistent desktop and mobile experience',
+      ],
+    },
+    group: 'software',
+  },
+  {
+    id: 'craze-cafe',
+    index: '04',
+    title: 'Craze Cafe',
+    category: 'Cafe / Business Website',
+    year: '2026',
+    summary:
+      'A modern and responsive cafe website that presents Craze Cafe’s brand and offerings through an engaging digital experience. The site was designed for clear navigation, consistent visual identity, and smooth browsing across desktop and mobile devices.',
+    image: '/images/craze-cafe.png',
+    alt: 'Craze Cafe responsive business website',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+    actions: [
+      {
+        label: 'Live Website',
+        href: 'https://craze-cafe.vercel.app/',
+        type: 'live',
+      },
+    ],
+    caseStudy: {
+      role: 'Web Designer & Frontend Developer',
+      challenge:
+        'Craze Cafe needed a modern online presence that could present its identity and offerings clearly while remaining easy to browse on mobile devices.',
+      approach:
+        'Built a responsive cafe website with a consistent visual direction, clear navigation, and layouts optimized for both desktop and mobile screens.',
+      outcome:
+        'Delivered a cohesive digital presentation that makes the cafe easier to discover and understand across different devices.',
+      highlights: [
+        'Responsive business website',
+        'Brand-focused interface design',
+        'Mobile-friendly navigation',
+      ],
+    },
+    group: 'software',
   },
   {
     id: 'talkglove',
@@ -138,12 +240,60 @@ export const PROJECTS: Project[] = [
       '/images/gloves.jpg',
     alt: 'Robotic hand reaching toward a light on a white background',
     tags: ['Flex Sensors', 'Gesture ML', 'Text-to-Speech', 'Wearable'],
-    link: 'https://drive.google.com/file/d/1xj7HYnum82hgzXYDXBLlqb6ykWEr7ZFM/view',
+    actions: [
+      {
+        label: 'Watch Demo',
+        href: 'https://drive.google.com/file/d/1xj7HYnum82hgzXYDXBLlqb6ykWEr7ZFM/view',
+        type: 'demo',
+      },
+    ],
+    caseStudy: {
+      role: 'Wearable Prototype Developer',
+      challenge:
+        'People who communicate through hand gestures may face barriers when interacting with individuals who do not understand the same gesture system.',
+      approach:
+        'Combined flex-sensor readings, gesture classification, and text-to-speech output in a wearable prototype that converts recognized hand gestures into spoken words.',
+      outcome:
+        'Demonstrated an end-to-end gesture-to-speech process in a wearable assistive-technology prototype.',
+      highlights: [
+        'Flex-sensor gesture capture',
+        'Gesture classification workflow',
+        'Spoken output through text-to-speech',
+      ],
+    },
+    group: 'hardware',
+  },
+  {
+    id: 'solar-tracker',
+    index: '06',
+    title: 'Smart Sun Tracking Solar Panel',
+    category: 'Embedded / IoT',
+    year: '2025',
+    summary:
+       'A dual-axis solar tracking prototype powered by a Raspberry Pi 5 that uses light-dependent sensors and servo-controlled movement to follow the strongest light source. The system demonstrates sensor-based automation designed to improve solar-panel alignment compared with a fixed position.',
+    image:
+      '/images/solar.jpg',
+    alt: 'Row of photovoltaic solar panels mounted on a green field',
+    tags: ['Raspberry Pi 5', 'Python', 'LDR Sensors', 'Servo Control'],
+    caseStudy: {
+      role: 'Embedded Systems Developer',
+      challenge:
+        'A fixed solar panel cannot automatically adjust its orientation as the strongest light direction changes throughout the day.',
+      approach:
+        'Developed a dual-axis prototype using a Raspberry Pi 5, Python, light-dependent sensors, and servo-controlled movement to detect light differences and adjust panel orientation.',
+      outcome:
+        'Demonstrated an automated sensor-to-actuator workflow that continuously aligns the prototype toward the strongest detected light source.',
+      highlights: [
+        'Raspberry Pi 5 control system',
+        'Dual-axis servo movement',
+        'Real-time LDR sensor input',
+      ],
+    },
     group: 'hardware',
   },
   {
     id: 'laundicast',
-    index: '06',
+    index: '07',
     title: 'LaundriCast',
     category: 'Full-Stack / IoT',
     year: '2024',
@@ -153,12 +303,18 @@ export const PROJECTS: Project[] = [
       '/images/laundricast.jpg',
     alt: 'Row of modern washing machines in a launderette',
     tags: ['React', 'Supabase', 'ESP32', 'Realtime'],
-    link: 'https://drive.google.com/file/d/1Y_5kcCXh3Lx7QxHzWec_I-tvE4kMiCO0/view',
+    actions: [
+      {
+        label: 'Watch Demo',
+        href: 'https://drive.google.com/file/d/1Y_5kcCXh3Lx7QxHzWec_I-tvE4kMiCO0/view',
+        type: 'demo',
+      },
+    ],
     group: 'software',
   },
   {
     id: 'component-detector',
-    index: '07',
+    index: '08',
     title: 'Electronic Component Detector',
     category: 'Computer Vision',
     year: '2023',
@@ -172,37 +328,8 @@ export const PROJECTS: Project[] = [
     group: 'software',
   },
   {
-    id: 'webpulse',
-    index: '08',
-    title: 'WebPulse',
-    category: 'Web App / Monitoring',
-    year: '2026',
-    summary:
-     'A role-based website monitoring platform with Viewer, Admin, and Super Admin account levels. It supports monitoring more than 15 websites, performs automated availability checks every 30 seconds, and delivered Gmail outage and recovery alerts within approximately 5–15 seconds during testing.',
-    image: 'https://steven-portfolio-alpha.vercel.app/webpulse.png',
-    alt: 'WebPulse website monitoring dashboard',
-    tags: ['React', 'Monitoring', 'Dashboard'],
-    link: 'https://web-pulse-6yjl.vercel.app/',
-    group: 'software',
-  },
-  {
-    id: 'human-da',
-    index: '09',
-    title: 'Human Da',
-    category: 'Mobile / Emergency Response',
-    year: '—',
-    summary:
-      'An emergency assistance and disaster-preparedness application that brings urgent-service information, emergency checklists, donation tracking, and disaster guides into one accessible platform. It was designed to help users quickly find practical information before and during emergency situations.',
-    image: 'https://steven-portfolio-alpha.vercel.app/humanda.jpg',
-    alt: 'Human Da emergency assistance and disaster preparedness application',
-    tags: ['Emergency App', 'Disaster Response', 'Donations'],
-    link:
-      'https://drive.google.com/file/d/1KSstapiL4L2-P0COBcqqJoUh6T0jFhc_/view?usp=sharing',
-    group: 'software',
-  },
-  {
     id: 'ark3',
-    index: '10',
+    index: '09',
     title: 'ARK3 Robotic Arm',
     category: 'Robotics / Automation',
     year: '—',
@@ -211,8 +338,34 @@ export const PROJECTS: Project[] = [
     image: 'https://steven-portfolio-alpha.vercel.app/ark3.png',
     alt: 'ARK3 robotic arm prototype',
     tags: ['Robotics', 'Automation', 'Prototype'],
-    link: 'https://www.facebook.com/share/v/1FGxNqcw7D/',
+    actions: [
+      {
+        label: 'Watch Demo',
+        href: 'https://www.facebook.com/share/v/1FGxNqcw7D/',
+        type: 'demo',
+      },
+    ],
     group: 'hardware',
+  },
+  {
+    id: 'human-da',
+    index: '10',
+    title: 'Human Da',
+    category: 'Mobile / Emergency Response',
+    year: '—',
+    summary:
+      'An emergency assistance and disaster-preparedness application that brings urgent-service information, emergency checklists, donation tracking, and disaster guides into one accessible platform. It was designed to help users quickly find practical information before and during emergency situations.',
+    image: 'https://steven-portfolio-alpha.vercel.app/humanda.jpg',
+    alt: 'Human Da emergency assistance and disaster preparedness application',
+    tags: ['Emergency App', 'Disaster Response', 'Donations'],
+    actions: [
+      {
+        label: 'Watch Demo',
+        href: 'https://drive.google.com/file/d/1KSstapiL4L2-P0COBcqqJoUh6T0jFhc_/view?usp=sharing',
+        type: 'demo',
+      },
+    ],
+    group: 'software',
   },
 ];
 
