@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { PROFILE, SOCIAL_LINKS } from '@/data/portfolio';
 
 const PORTRAIT_SRC =
-  '/images/STEVEN_CLAUDE_JUMAO-AS_GRAD_PIC-removebg-preview copy.png';
+  '/images/STEVEN_CLAUDE_JUMAO-AS_GRAD_PIC-removebg-preview.png';
 
 export default function Hero() {
   const portraitWrapRef = useRef<HTMLDivElement>(null);
