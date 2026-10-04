@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+
 import { ArrowUpRight } from 'lucide-react';
+
 import { PROFILE, SOCIAL_LINKS } from '@/data/portfolio';
 
 const PORTRAIT_SRC =
@@ -268,11 +270,11 @@ export default function Hero() {
           </div>
 
           {/* Desktop name */}
-          <div className="absolute inset-x-0 top-[8%] z-0 flex items-start justify-center px-2">
+          <div className="absolute inset-x-0 top-[8%] z-0 flex items-start justify-center px-6">
             <h1 className="flex items-baseline justify-center text-center">
               <span className="reveal-mask">
                 <span
-                  className="text-outline-lg block text-[11.5vw] font-extrabold leading-[0.88] tracking-name xl:text-[10.5vw]"
+                  className="text-outline-lg block whitespace-nowrap text-[8.8vw] font-extrabold leading-[0.88] tracking-name xl:text-[8vw]"
                   style={{
                     animation:
                       'maskUp 1s cubic-bezier(0.22,1,0.36,1) both',
@@ -283,9 +285,9 @@ export default function Hero() {
                 </span>
               </span>
 
-              <span className="reveal-mask ml-7">
+              <span className="reveal-mask ml-5">
                 <span
-                  className="block text-[11.5vw] font-extrabold leading-[0.88] tracking-name text-black xl:text-[10.5vw]"
+                  className="block whitespace-nowrap text-[8.8vw] font-extrabold leading-[0.88] tracking-name text-black xl:text-[8vw]"
                   style={{
                     animation:
                       'maskUp 1s cubic-bezier(0.22,1,0.36,1) both',

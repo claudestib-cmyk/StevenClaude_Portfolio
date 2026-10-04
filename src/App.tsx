@@ -16,6 +16,7 @@ import Footer from '@/components/sections/Footer';
 export default function App() {
   useEffect(() => {
     const root = document.documentElement;
+
     const animatedElements =
       document.querySelectorAll<HTMLElement>('[data-scroll-fade]');
 
@@ -52,11 +53,6 @@ export default function App() {
           if (entry.isIntersecting) {
             element.classList.add('is-visible');
           } else {
-            /*
-             * Remove the class when the section leaves the viewport.
-             * This allows the animation to replay when scrolling in
-             * either direction.
-             */
             element.classList.remove('is-visible');
           }
         });
@@ -83,51 +79,65 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-black antialiased">
+    <div className="min-h-screen overflow-x-hidden bg-white text-black antialiased">
       <Navbar />
 
       <main>
-        <div className="scroll-fade" data-scroll-fade>
+        {/* HERO */}
+        <div
+          className="scroll-fade overflow-visible"
+          data-scroll-fade
+        >
           <Hero />
         </div>
 
+        {/* INTRODUCTION */}
         <div className="scroll-fade" data-scroll-fade>
           <Introduction />
         </div>
 
+        {/* SELECTED WORK */}
         <div className="scroll-fade" data-scroll-fade>
           <SelectedWork />
         </div>
 
+        {/* EXPERTISE */}
         <div className="scroll-fade" data-scroll-fade>
           <Expertise />
         </div>
 
+        {/* ABOUT */}
         <div className="scroll-fade" data-scroll-fade>
           <About />
         </div>
 
+        {/* TECHNICAL TOOLKIT */}
         <div className="scroll-fade" data-scroll-fade>
           <TechnicalToolkit />
         </div>
 
+        {/* EDUCATION */}
         <div className="scroll-fade" data-scroll-fade>
           <Education />
         </div>
 
+        {/* DEVELOPMENT JOURNEY */}
         <div className="scroll-fade" data-scroll-fade>
           <DevelopmentJourney />
         </div>
 
+        {/* WORK PROCESS */}
         <div className="scroll-fade" data-scroll-fade>
           <WorkProcess />
         </div>
 
+        {/* CONTACT */}
         <div className="scroll-fade" data-scroll-fade>
           <Contact />
         </div>
       </main>
 
+      {/* FOOTER */}
       <div className="scroll-fade" data-scroll-fade>
         <Footer />
       </div>
